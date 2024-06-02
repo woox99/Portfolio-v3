@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+    /* border: 1px solid white; */
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 0.5lvw;
+}
+body{
+    background-color: #0d1117;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+}
+
+.light-text{
+    color: #d6e2e7;
+    opacity: 0.8;
+}
+.dark-text{
+    color: #ffffff;
+    opacity: 0.4;
+}
+
+/* Main */
+.main{
+    display: flex;
+    /* position: fixed;
+    top: 0;
+    left: 0; */
+    /* z-index: 1; */
+    width: 100lvw;
+    height: 100lvh;
+    /* background-color: red; */
+}
+.top-gradient{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100lvw;
+    height: 10lvh;
+    background-image: linear-gradient(#0d1117, #0d111700);
+}
+.bottom-gradient{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100lvw;
+    height: 10lvh;
+    background-image: linear-gradient(#0d111700, #0d1117);
+}
+
+.main-left{
+    width: 60lvw;
+    background-color: blue;
+    height: 100%;
+}
+.intro{
+    border: 1px solid red;
+    width: 36lvw;
+}
+.name{
+    font-size: 7rem;
+    font-weight: 800;
+}
+.job-title{
+    font-size: 3rem;
+    font-weight: 500;
+    margin-top: 2lvw;
+}
+.professional-statement{
+    font-size: 5rem;
+    font-weight: 500;
+    margin-top: 2lvw;
+}
+.technologies{
+    display: flex;
+}
+.technologies img{
+    width: 10vw;
+}
+
+.main-right{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6lvw;
+    height: 100lvh;
+    background-color: red;
+}
+
+/* Content */
+.content{
+    border: 1px solid bisque;
+    /* background-color: bisque; */
+    position: absolute;
+    top: 0;
+    left: 60lvw;
+    width: calc(34lvw - 17px);
+    /* height: 100lvh; */
+    height: 300lvh;
+}
+
