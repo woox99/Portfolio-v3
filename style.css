@@ -6,7 +6,7 @@
     padding: 0;
 }
 html{
-    font-size: 0.5lvw;
+    font-size: 0.6lvw;
 }
 body{
     background-color: #0d1117;
@@ -25,12 +25,12 @@ body{
 
 /* Main */
 .main{
-    display: flex;
-    /* position: fixed;
+    /* display: flex; */
+    position: fixed;
     top: 0;
-    left: 0; */
+    left: 0;
     /* z-index: 1; */
-    width: 100lvw;
+    width: 55lvw;
     height: 100lvh;
     /* background-color: red; */
 }
@@ -51,15 +51,11 @@ body{
     height: 10lvh;
     background-image: linear-gradient(#0d111700, #0d1117);
 }
-
-.main-left{
-    width: 60lvw;
-    background-color: blue;
-    height: 100%;
-}
 .intro{
-    border: 1px solid red;
-    width: 36lvw;
+    /* border: 1px solid red; */
+    width: 50lvw;
+    margin-top: 13lvw;
+    margin-left: 4lvw;
 }
 .name{
     font-size: 7rem;
@@ -68,37 +64,59 @@ body{
 .job-title{
     font-size: 3rem;
     font-weight: 500;
-    margin-top: 2lvw;
+    margin-top: 2.25lvw;
 }
 .professional-statement{
     font-size: 5rem;
     font-weight: 500;
-    margin-top: 2lvw;
+    margin-top: 2.25lvw;
+}
+.software {
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    color: transparent; 
 }
 .technologies{
-    display: flex;
-}
-.technologies img{
-    width: 10vw;
-}
-
-.main-right{
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 6lvw;
-    height: 100lvh;
-    background-color: red;
+    bottom: 2lvw;
+    display: flex;
+    align-items: center;
+    opacity: 0.2;
+    margin-left: 4lvw;
+    gap: 4lvw;
+    /* border: 1px solid red; */
+}
+img{
+    /* background-color: red; */
+}
+.django{
+    height: 2lvw;
+}
+.flask{
+    height: 2lvw;
+}
+.mysql{
+    height: 2.5lvw;
+    margin-bottom: 1lvw;
+}
+.aws{
+    height: 2lvw;
+}
+.duct-tape{
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 800;
 }
 
-/* Content */
-.content{
+
+/* Scroll Content */
+.scroll-content{
     border: 1px solid bisque;
     /* background-color: bisque; */
     position: absolute;
     top: 0;
-    left: 60lvw;
-    width: calc(34lvw - 17px);
+    right: 0;
+    width: 40lvw;
     /* height: 100lvh; */
     height: 300lvh;
 }
