@@ -51,8 +51,17 @@ body{
     height: 10lvh;
     background-image: linear-gradient(#0d111700, #0d1117);
 }
+.stripe{
+    position: absolute;
+    top: -52.5lvw;
+    z-index: 0;
+    transform: rotate(315deg);
+    background-image: linear-gradient(#B1B2B5 40%, #0d1117 90%);
+    opacity: 0.05;
+    width: 40lvw;
+    height: 150lvw;
+}
 .intro{
-    /* border: 1px solid red; */
     width: 50lvw;
     margin-top: 13lvw;
     margin-left: 4lvw;
@@ -73,9 +82,10 @@ body{
 }
 .software {
     background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    /* background: linear-gradient(90deg, #317dff, #9072ff); */
     -webkit-background-clip: text;
     color: transparent; 
-}
+    }
 .technologies{
     position: absolute;
     bottom: 2lvw;
@@ -84,13 +94,10 @@ body{
     opacity: 0.2;
     margin-left: 4lvw;
     gap: 4lvw;
-    /* border: 1px solid red; */
 }
-img{
-    /* background-color: red; */
-}
+
 .django{
-    height: 2lvw;
+    height: 1.6lvw;
 }
 .flask{
     height: 2lvw;
@@ -101,6 +108,7 @@ img{
 }
 .aws{
     height: 2lvw;
+    margin-top: 0.5lvw;
 }
 .duct-tape{
     color: #ffffff;
@@ -111,7 +119,7 @@ img{
 
 /* Scroll Content */
 .scroll-content{
-    border: 1px solid bisque;
+    /* border: 1px solid bisque; */
     /* background-color: bisque; */
     position: absolute;
     top: 0;
@@ -120,4 +128,34 @@ img{
     /* height: 100lvh; */
     height: 300lvh;
 }
-
+.links{
+    position: fixed;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 5lvw;
+    margin-top: 6lvw;
+    /* border: 1px solid red; */
+}
+.links i{
+    color: #d6e2e7;
+    opacity: 0.8;
+    font-size: 4rem;
+    margin-bottom: 1.25lvw;
+}
+.links .vertical-line{
+    height: 57vh;
+    background-color: #317dff;
+    width: 1.5px;
+}
+.projects{
+    margin-top: 10lvw;
+}
+.project{
+    border: 1px solid bisque;
+    width: 35lvw;
+    height: 14lvw;
+    margin-bottom: 1lvw;
+    cursor: pointer;
+}
