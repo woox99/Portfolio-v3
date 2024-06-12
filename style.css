@@ -1,34 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-*{
+* {
     /* border: 1px solid white; */
     margin: 0;
     padding: 0;
 }
-html{
+
+html {
     font-size: 0.6lvw;
 }
-body{
+
+body {
     background-color: #0d1117;
     font-family: "Inter", sans-serif;
     overflow-x: hidden;
 }
 
-.light-text{
+.light-text {
     color: #d6e2e7;
     opacity: 0.8;
 }
-.dark-text{
+
+.dark-text {
     color: #ffffff;
     opacity: 0.4;
 }
-.fa-arrow-right{
+
+.fa-arrow-right {
     color: #317dff;
     transform: rotate(315deg);
+    /* background-color: red; */
+    /* margin-bottom: 1lvw; */
+    /* opacity: 0.8; */
+    /* transition: 0.25s ease; */
+}
+
+a {
+    text-decoration: none;
 }
 
 /* Main */
-.main{
+.main {
     /* display: flex; */
     position: fixed;
     top: 0;
@@ -38,7 +50,8 @@ body{
     height: 100lvh;
     /* background-color: red; */
 }
-.top-gradient{
+
+.top-gradient {
     position: fixed;
     top: 0;
     left: 0;
@@ -47,50 +60,59 @@ body{
     height: 10lvh;
     background-image: linear-gradient(#0d1117, #0d111700);
 }
-.bottom-gradient{
+
+.bottom-gradient {
     position: fixed;
     bottom: 0;
     left: 0;
+    z-index: 1;
     width: 100lvw;
     height: 10lvh;
     background-image: linear-gradient(#0d111700, #0d1117);
 }
-.stripe{
+
+.stripe {
     position: absolute;
     top: -52.5lvw;
     z-index: 0;
     transform: rotate(315deg);
-    background-image: linear-gradient(#B1B2B5 40%, #0d1117 90%);
+    background-image: linear-gradient(#B1B2B5 40%, #0d1117 70%);
     opacity: 0.05;
     width: 40lvw;
     height: 150lvw;
 }
-.intro{
+
+.intro {
     width: 50lvw;
     margin-top: 13lvw;
     margin-left: 4lvw;
 }
-.name{
+
+.name {
     font-size: 7rem;
     font-weight: 800;
 }
-.job-title{
+
+.job-title {
     font-size: 3rem;
     font-weight: 500;
     margin-top: 2.25lvw;
 }
-.professional-statement{
+
+.professional-statement {
     font-size: 5rem;
     font-weight: 500;
     margin-top: 2.25lvw;
 }
+
 .software {
     background: linear-gradient(90deg, #ff7e5f, #feb47b);
     /* background: linear-gradient(90deg, #317dff, #9072ff); */
     -webkit-background-clip: text;
-    color: transparent; 
-    }
-.technologies{
+    color: transparent;
+}
+
+.technologies {
     position: absolute;
     bottom: 2lvw;
     display: flex;
@@ -100,21 +122,25 @@ body{
     gap: 4lvw;
 }
 
-.django{
+.django {
     height: 1.6lvw;
 }
-.flask{
+
+.flask {
     height: 2lvw;
 }
-.mysql{
+
+.mysql {
     height: 2.5lvw;
     margin-bottom: 1lvw;
 }
-.aws{
+
+.aws {
     height: 2lvw;
     margin-top: 0.5lvw;
 }
-.duct-tape{
+
+.duct-tape {
     color: #ffffff;
     font-size: 2rem;
     font-weight: 800;
@@ -122,7 +148,7 @@ body{
 
 
 /* Scroll Content */
-.scroll-content{
+.scroll-content {
     /* border: 1px solid bisque; */
     /* background-color: bisque; */
     position: absolute;
@@ -130,9 +156,10 @@ body{
     right: 0;
     width: 40lvw;
     /* height: 100lvh; */
-    height: 300lvh;
+    /* height: 300lvh; */
 }
-.links{
+
+.links {
     position: fixed;
     right: 0;
     display: flex;
@@ -142,65 +169,137 @@ body{
     margin-top: 6lvw;
     /* border: 1px solid red; */
 }
-.links i{
+
+.links i {
     color: #d6e2e7;
     opacity: 0.8;
     font-size: 4rem;
     margin-bottom: 1.25lvw;
 }
-.links .vertical-line{
+
+.links .vertical-line {
     height: 57vh;
     background-color: #317dff;
     width: 1.5px;
 }
-.projects{
+
+.projects {
     margin-top: 10lvw;
-    }
-.project{
+}
+
+.project {
+    position: relative;
     display: flex;
     justify-content: space-between;
-    /* border: 1px solid bisque; */
     width: 35lvw;
     height: 14.5lvw;
     margin-bottom: 1lvw;
     cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.25s ease;
 }
-.date{
+
+/* .project::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    height: 12lvw;
+    width: 8lvw;
+    background: radial-gradient(#ffffff, #0d1117);
+    border-radius: 50%;
+    opacity: 0.1;
+    filter: blur(20px);
+} */
+
+.project:hover {
+    opacity: 1.0;
+}
+
+/* .project:hover .date p {
+    transform: rotate(360deg);
+} */
+
+.project:hover .card .title .arrow {
+    transform: translate(0.25lvw, -0.25lvw);
+}
+
+.arrow {
+    display: flex;
+    align-items: end;
+    transition: transform 0.25s ease;
+}
+
+.date {
     font-size: 1.4rem;
     font-weight: 500;
+    margin-top: 3lvw;
 }
-.card{
+
+.date p {
+    transform-origin: 100% 100%;
+    transform: rotate(315deg);
+    transition: transform 0.25s ease;
+    /* transition: 0.25s ease; */
+}
+
+.card {
     width: 26lvw;
     height: 100%;
     background-color: #B1B2B510;
     border-radius: 8px;
 }
-.card img{
-    z-index: 1;
+
+.card img {
     width: 15lvw;
     height: 10lvw;
     border: 1px solid #ffffff10;
     border-radius: 5px;
+}
+
+.screen {
+    position: relative;
+    z-index: 1;
     margin-left: -6lvw;
 }
-.card-top{
+
+.screen::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at right bottom, transparent 75%, rgba(255, 255, 255, 0.35) 80%, transparent);
+    position: absolute;
+    opacity: 0.55;
+    border-radius: 5px;
+}
+
+.card-top {
     display: flex;
     margin-top: 1lvw;
 }
-.card .details{
+
+.card .details {
     margin-left: 1lvw;
 }
-.card .title{
+
+.card .title {
     display: flex;
     align-items: end;
     font-size: 2rem;
     font-weight: 800;
 }
-.card .title i{
+
+.card .v {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.card .title i {
     font-size: 1.5rem;
     margin-left: 0.25lvw;
 }
-.card .horizontal-line{
+
+.card .horizontal-line {
     position: relative;
     height: 2px;
     background-color: #317dff;
@@ -208,6 +307,7 @@ body{
     margin-top: 1lvw;
     margin-right: 2lvw;
 }
+
 .card .horizontal-line::before {
     content: '';
     position: absolute;
@@ -217,18 +317,21 @@ body{
     height: 100%;
     background-color: inherit;
 }
-.card .description{
+
+.card .description {
     font-size: 1.5rem;
     margin-top: 1lvw;
     /* border: 1px solid red; */
     padding-right: 3lvw;
 }
-.card .tags{
+
+.card .tags {
     display: flex;
     margin-left: 1lvw;
     gap: 0.75lvw;
 }
-.card .tag{
+
+.card .tag {
     position: relative;
     display: flex;
     align-items: center;
@@ -236,7 +339,8 @@ body{
     height: 1.5lvw;
     margin-top: 1lvw;
 }
-.card .tag::before{
+
+.card .tag::before {
     content: '';
     position: absolute;
     top: 0;
@@ -247,7 +351,8 @@ body{
     border-radius: 10vw;
     opacity: 0.1;
 }
-.card .tag p{
+
+.card .tag p {
     font-size: 1.4rem;
     font-weight: 500;
     color: #84a0cf;
