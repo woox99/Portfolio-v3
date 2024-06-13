@@ -29,10 +29,6 @@ body {
 .fa-arrow-right {
     color: #317dff;
     transform: rotate(315deg);
-    /* background-color: red; */
-    /* margin-bottom: 1lvw; */
-    /* opacity: 0.8; */
-    /* transition: 0.25s ease; */
 }
 
 a {
@@ -41,14 +37,11 @@ a {
 
 /* Main */
 .main {
-    /* display: flex; */
     position: fixed;
     top: 0;
     left: 0;
-    /* z-index: 1; */
     width: 55lvw;
     height: 100lvh;
-    /* background-color: red; */
 }
 
 .top-gradient {
@@ -88,7 +81,7 @@ a {
     margin-left: 4lvw;
 }
 
-.name {
+.greeting {
     font-size: 7rem;
     font-weight: 800;
 }
@@ -147,16 +140,14 @@ a {
 }
 
 
-/* Scroll Content */
+/* ### Scroll Content ### */
+
+/* Projects */
 .scroll-content {
-    /* border: 1px solid bisque; */
-    /* background-color: bisque; */
     position: absolute;
     top: 0;
     right: 0;
     width: 40lvw;
-    /* height: 100lvh; */
-    /* height: 300lvh; */
 }
 
 .links {
@@ -167,7 +158,6 @@ a {
     align-items: center;
     width: 5lvw;
     margin-top: 6lvw;
-    /* border: 1px solid red; */
 }
 
 .links i {
@@ -184,7 +174,7 @@ a {
 }
 
 .projects {
-    margin-top: 10lvw;
+    margin-top: 6lvw;
 }
 
 .project {
@@ -199,35 +189,8 @@ a {
     transition: opacity 0.25s ease;
 }
 
-/* .project::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    z-index: -1;
-    height: 12lvw;
-    width: 8lvw;
-    background: radial-gradient(#ffffff, #0d1117);
-    border-radius: 50%;
-    opacity: 0.1;
-    filter: blur(20px);
-} */
-
 .project:hover {
     opacity: 1.0;
-}
-
-/* .project:hover .date p {
-    transform: rotate(360deg);
-} */
-
-.project:hover .card .title .arrow {
-    transform: translate(0.25lvw, -0.25lvw);
-}
-
-.arrow {
-    display: flex;
-    align-items: end;
-    transition: transform 0.25s ease;
 }
 
 .date {
@@ -240,7 +203,6 @@ a {
     transform-origin: 100% 100%;
     transform: rotate(315deg);
     transition: transform 0.25s ease;
-    /* transition: 0.25s ease; */
 }
 
 .card {
@@ -286,16 +248,23 @@ a {
     display: flex;
     align-items: end;
     font-size: 2rem;
-    font-weight: 800;
+    font-weight: 600;
 }
 
-.card .v {
+.card .version {
     font-size: 1.25rem;
     font-weight: 400;
 }
 
-.card .title i {
+.project:hover .card .title .arrow {
+    transform: translate(0.25lvw, -0.25lvw);
+}
+
+.arrow {
+    display: flex;
+    align-items: end;
     font-size: 1.5rem;
+    transition: transform 0.25s ease;
     margin-left: 0.25lvw;
 }
 
@@ -320,9 +289,11 @@ a {
 
 .card .description {
     font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 0.25px;
     margin-top: 1lvw;
+    padding-right: 2.5lvw;
     /* border: 1px solid red; */
-    padding-right: 3lvw;
 }
 
 .card .tags {
@@ -358,4 +329,93 @@ a {
     color: #84a0cf;
     margin-left: 0.75lvw;
     margin-right: 0.75lvw;
+}
+
+/* Contact Section */
+.contact {
+    height: 100lvh;
+    margin-left: -1.5lvw;
+    border: 1px solid #0d111700;
+}
+
+.contact form {
+    width: 33lvw;
+    margin-top: 13lvw;
+}
+
+.contact .title {
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+
+.contact input {
+    font-size: 4rem;
+    font-weight: 800;
+    width: 23lvw;
+    background-color: #0d1117;
+    color: #ffffff70;
+    border: none;
+    border-bottom: 0.6lvw solid #317dff50;
+    margin-top: 2.5lvw;
+    padding-bottom: 0.5lvw;
+}
+
+.contact input:focus {
+    outline: none;
+    color: #ffffff;
+    border-bottom: 0.6lvw solid #317dff;
+}
+
+.contact textarea {
+    font-size: 4rem;
+    font-weight: 800;
+    width: 100%;
+    font-family: "Inter", sans-serif;
+    color: #ffffff70;
+    background-color: #0d1117;
+    border: none;
+    border-bottom: 0.6lvw solid #317dff50;
+    margin-top: 2lvw;
+    overflow-y: hidden;
+    padding-top: 1lvw;
+    padding-bottom: 0.65lvw;
+    resize: none;
+}
+
+.contact textarea:focus {
+    color: #ffffff;
+    border-bottom: 0.6lvw solid #317dff;
+    outline: none;
+}
+
+.contact .send {
+    display: flex;
+    justify-content: end;
+    margin-top: 1lvw;
+    /* border: 1px solid red; */
+}
+
+.send-btn {
+    display: flex;
+    /* border: 1px solid white; */
+    cursor: pointer;
+}
+
+.send button {
+    background-color: #0d1117;
+    outline: none;
+    border: none;
+    font-size: 3.5rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.send-btn .arrow{
+    margin-bottom: 0.75lvw;
+}
+
+.send-btn:hover .arrow {
+    transform: translate(0.25lvw, -0.25lvw);
+    /* background-color: red; */
 }
