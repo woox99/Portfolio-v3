@@ -50,7 +50,7 @@ a {
     left: 0;
     z-index: 1;
     width: 100lvw;
-    height: 10lvh;
+    height: 6lvh;
     background-image: linear-gradient(#0d1117, #0d111700);
 }
 
@@ -60,7 +60,7 @@ a {
     left: 0;
     z-index: 1;
     width: 100lvw;
-    height: 10lvh;
+    height: 6lvh;
     background-image: linear-gradient(#0d111700, #0d1117);
 }
 
@@ -170,7 +170,7 @@ a {
 .links .vertical-line {
     height: 57vh;
     background-color: #317dff;
-    width: 1.5px;
+    width: 2px;
 }
 
 .projects {
@@ -418,4 +418,73 @@ a {
 .send-btn:hover .arrow {
     transform: translate(0.25lvw, -0.25lvw);
     /* background-color: red; */
+}
+
+/* ########## MOBILE ######### */
+@media (max-width: 600px) {
+
+    .main {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100lvw;
+        height: unset;
+        /* border: 1px solid red; */
+    }
+
+    .stripe {
+        /* position: absolute; */
+        top: -25lvw;
+        /* z-index: 0; */
+        /* transform: rotate(315deg); */
+        /* background-image: linear-gradient(#B1B2B5 40%, #0d1117 70%); */
+        /* opacity: 0.05; */
+        width: 80lvw;
+        /* height: 150lvw; */
+    }
+    
+    .intro {
+        width: 75lvw;
+        margin-top: 25lvw;
+        margin-left: 8lvw;
+    }
+    
+    .greeting {
+        font-size: 10.5rem;
+        /* font-weight: 800; */
+    }
+    
+    .job-title {
+        font-size: 5rem;
+        /* font-weight: 500; */
+        margin-top: 4lvw;
+    }
+    
+    .professional-statement {
+        font-size: 7.5rem;
+        /* font-weight: 500; */
+        margin-top: 4lvw;
+    }
+    
+    /* .software {
+        background: linear-gradient(90deg, #ff7e5f, #feb47b);
+        -webkit-background-clip: text;
+        color: transparent;
+    } */
+    
+    .technologies {
+        display: none;
+    }
+
+    .scroll-content {
+        display: none;
+        position: absolute;
+        top: 50lvw;
+        left: 0;
+        width: 40lvw;
+    }
+
+    .links{
+        display: none;
+    }
 }
