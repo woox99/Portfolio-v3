@@ -199,10 +199,11 @@ a {
     margin-top: 3lvw;
 }
 
+
 .date p {
     transform-origin: 100% 100%;
     transform: rotate(315deg);
-    transition: transform 0.25s ease;
+    /* transition: transform 0.25s ease; */
 }
 
 .card {
